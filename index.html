@@ -1,78 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DSPORT FC</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSPORT FC</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- NAVBAR -->
 <header class="navbar">
-    <div class="brand">
-        <img src="assets/logo.png" alt="DSPORT logo">
-        <span>DSPORT</span>
-    </div>
-
-    <nav class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#team">Team</a>
-        <a href="#matches">Matches</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  <div class="brand">
+    <img src="assets/logo.png" alt="DSPORT logo">
+    <span>DSPORT</span>
+  </div>
+  <div class="hamburger" id="hamburger">&#9776;</div>
+  <nav class="nav-links" id="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#team">Team</a>
+    <a href="#matches">Matches</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <!-- HERO SECTION -->
 <section id="home" class="hero">
-    <div class="hero-content">
-        <h1>DSPORT FOOTBALL CLUB</h1>
-        <p>Passion • Discipline • Victory</p>
-        <a href="#about" class="btn">Learn More</a>
-    </div>
+  <div class="hero-content">
+    <h1>DSPORT FOOTBALL CLUB</h1>
+    <p>Passion • Discipline • Victory</p>
+    <a href="#about" class="btn">Learn More</a>
+  </div>
 </section>
 
 <!-- ABOUT SECTION -->
 <section id="about" class="section">
-    <h2>About DSPORT</h2>
-    <p>
-        DSPORT Football Club is built on passion, discipline, and the hunger to win.
-        We develop talent, promote teamwork, and compete with pride.
-    </p>
+  <h2>About DSPORT</h2>
+  <p>DSPORT FC develops talent, promotes teamwork, and competes with pride.</p>
 </section>
 
 <!-- TEAM SECTION -->
 <section id="team" class="section dark">
-    <h2>Our Team</h2>
-
-    <div class="cards">
-        <div class="card">Goalkeepers</div>
-        <div class="card">Defenders</div>
-        <div class="card">Midfielders</div>
-        <div class="card">Forwards</div>
+  <h2>Our Team</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="assets/player1.jpg" alt="Player 1">
+      <h3>John Doe</h3>
+      <p>Forward</p>
     </div>
+    <div class="card">
+      <img src="assets/player2.jpg" alt="Player 2">
+      <h3>Jane Smith</h3>
+      <p>Midfielder</p>
+    </div>
+    <!-- Add more players -->
+  </div>
 </section>
 
 <!-- MATCHES SECTION -->
 <section id="matches" class="section">
-    <h2>Upcoming Matches</h2>
-    <ul class="matches">
-        <li>DSPORT FC vs City United — Jan 20</li>
-        <li>DSPORT FC vs Blue Stars — Jan 28</li>
-        <li>DSPORT FC vs Rising Lions — Feb 5</li>
-    </ul>
+  <h2>Upcoming Matches</h2>
+  <div class="match-cards">
+    <div class="match-card">DSPORT vs City United — Jan 20</div>
+    <div class="match-card">DSPORT vs Blue Stars — Jan 28</div>
+    <div class="match-card">DSPORT vs Rising Lions — Feb 5</div>
+  </div>
+</section>
+
+<!-- GALLERY SECTION -->
+<section id="gallery" class="section dark">
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    <img src="assets/hero-bg.jpg" alt="Match 1">
+    <img src="assets/hero-bg.jpg" alt="Match 2">
+    <img src="assets/hero-bg.jpg" alt="Match 3">
+  </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section dark">
-    <h2>Contact Us</h2>
-    <p>Email: dsportfc@email.com</p>
+<section id="contact" class="section">
+  <h2>Contact Us</h2>
+  <p>Email: dsportfc@email.com</p>
 </section>
 
 <footer class="footer">
-    <p>© 2026 DSPORT FC. All rights reserved.</p>
+  <p>© 2026 DSPORT FC. All rights reserved.</p>
+  <button id="theme-toggle">Toggle Dark/Light</button>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
