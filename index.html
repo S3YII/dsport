@@ -2,78 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DSPORT</title>
+  <title>DSPORT FC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<section class="pitch">
-
-  <!-- GK -->
-  <div class="player gk" onclick="showStats(0)">
-    <img src="assets/players/neuer.jpg">
-    <span>Neuer</span>
+<header class="navbar">
+  <div class="brand">
+    <img src="assets/logo.png" alt="DSPORT logo">
+    <span>DSPORT</span>
   </div>
+</header>
 
-  <!-- DEF -->
-  <div class="player lb" onclick="showStats(1)">
-    <img src="assets/players/davies.jpg">
-    <span>Davies</span>
-  </div>
+<main>
+  <section class="pitch">
 
-  <div class="player cb1" onclick="showStats(2)">
-    <img src="assets/players/vandijk.jpg">
-    <span>Van Dijk</span>
-  </div>
+    <!-- GOALKEEPER -->
+    <div class="player gk" onclick="showStats(0)">
+      <img src="assets/players/neuer.jpg">
+      <span>Neuer</span>
+    </div>
 
-  <div class="player cb2" onclick="showStats(3)">
-    <img src="assets/players/koulibaly.jpg">
-    <span>Koulibaly</span>
-  </div>
+    <!-- DEFENDERS -->
+    <div class="player lb" onclick="showStats(1)">
+      <img src="assets/players/davies.jpg">
+      <span>Davies</span>
+    </div>
 
-  <div class="player rb" onclick="showStats(4)">
-    <img src="assets/players/trent.jpg">
-    <span>Trent</span>
-  </div>
+    <div class="player cb1" onclick="showStats(2)">
+      <img src="assets/players/vandijk.jpg">
+      <span>Van Dijk</span>
+    </div>
 
-  <!-- MID -->
-  <div class="player cm1" onclick="showStats(5)">
-    <img src="assets/players/kante.jpg">
-    <span>Kanté</span>
-  </div>
+    <div class="player cb2" onclick="showStats(3)">
+      <img src="assets/players/koulibaly.jpg">
+      <span>Koulibaly</span>
+    </div>
 
-  <div class="player cm2" onclick="showStats(6)">
-    <img src="assets/players/debruyne.jpg">
-    <span>De Bruyne</span>
-  </div>
+    <div class="player rb" onclick="showStats(4)">
+      <img src="assets/players/trent.jpg">
+      <span>Trent</span>
+    </div>
 
-  <div class="player cam" onclick="showStats(7)">
-    <img src="assets/players/messi.jpg">
-    <span>Messi</span>
-  </div>
+    <!-- MIDFIELDERS -->
+    <div class="player cm1" onclick="showStats(5)">
+      <img src="assets/players/kante.jpg">
+      <span>Kanté</span>
+    </div>
 
-  <!-- ATT -->
-  <div class="player lw" onclick="showStats(8)">
-    <img src="assets/players/ronaldo.jpg">
-    <span>Ronaldo</span>
-  </div>
+    <div class="player cm2" onclick="showStats(6)">
+      <img src="assets/players/debruyne.jpg">
+      <span>De Bruyne</span>
+    </div>
 
-  <div class="player st" onclick="showStats(9)">
-    <img src="assets/players/lewa.jpg">
-    <span>Lewandowski</span>
-  </div>
+    <div class="player cam" onclick="showStats(7)">
+      <img src="assets/players/messi.jpg">
+      <span>Messi</span>
+    </div>
 
-  <div class="player rw" onclick="showStats(10)">
-    <img src="assets/players/mbappe.jpg">
-    <span>Mbappé</span>
-  </div>
+    <!-- ATTACKERS -->
+    <div class="player lw" onclick="showStats(8)">
+      <img src="assets/players/ronaldo.jpg">
+      <span>Ronaldo</span>
+    </div>
 
-</section>
+    <div class="player st" onclick="showStats(9)">
+      <img src="assets/players/lewa.jpg">
+      <span>Lewandowski</span>
+    </div>
 
-<!-- STATS MODAL -->
+    <div class="player rw" onclick="showStats(10)">
+      <img src="assets/players/mbappe.jpg">
+      <span>Mbappé</span>
+    </div>
+
+  </section>
+</main>
+
+<!-- PLAYER STATS MODAL -->
 <div id="modal" class="modal">
   <div class="modal-content">
-    <span onclick="closeModal()">✖</span>
+    <button class="close-btn" onclick="closeModal()">×</button>
     <div id="playerStats"></div>
   </div>
 </div>
