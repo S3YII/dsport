@@ -1,122 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DSPORT FC</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>DSPORT</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar">
-  <div class="brand">
-    <img src="assets/logo.png" alt="DSPORT logo">
-    <span>DSPORT</span>
-  </div>
-  <div class="hamburger" id="hamburger">&#9776;</div>
-  <nav class="nav-links" id="nav-links">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#team">Team</a>
-    <a href="#matches">Matches</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+<section class="pitch">
 
-<!-- HERO SECTION -->
-<section id="home" class="hero">
-  <div class="hero-content">
-    <h1>DSPORT FOOTBALL CLUB</h1>
-    <p>Passion • Discipline • Victory</p>
-    <a href="#about" class="btn">Learn More</a>
-  </div>
-</section>
-
-<!-- ABOUT SECTION -->
-<section id="about" class="section">
-  <h2>About DSPORT</h2>
-  <p>DSPORT FC develops talent, promotes teamwork, and competes with pride.</p>
-</section>
-
-<!-- TEAM SECTION -->
-<section id="team" class="section dark">
-  <h2>DSPORT Starting XI (4-3-3)</h2>
-
-  <div class="pitch">
-
-    <!-- FORWARDS -->
-    <div class="row forwards">
-      <div class="player">Mbappé<br><span>10</span></div>
-      <div class="player">Lewandowski<br><span>9</span></div>
-      <div class="player">Ronaldo<br><span>7</span></div>
-    </div>
-
-    <!-- MIDFIELDERS -->
-    <div class="row midfielders">
-      <div class="player">Messi<br><span>30</span></div>
-      <div class="player">De Bruyne<br><span>17</span></div>
-      <div class="player">Kanté<br><span>7</span></div>
-    </div>
-
-    <!-- DEFENDERS -->
-    <div class="row defenders">
-      <div class="player">Davies<br><span>19</span></div>
-      <div class="player">Van Dijk<br><span>4</span></div>
-      <div class="player">Koulibaly<br><span>5</span></div>
-      <div class="player">Alexander-Arnold<br><span>66</span></div>
-    </div>
-
-    <!-- GOALKEEPER -->
-    <div class="row goalkeeper">
-      <div class="player gk">Neuer<br><span>1</span></div>
-    </div>
-
+  <!-- GK -->
+  <div class="player gk" onclick="showStats(0)">
+    <img src="assets/players/neuer.jpg">
+    <span>Neuer</span>
   </div>
 
-  <h3 class="subs-title">Substitutes</h3>
-  <div class="subs">
-    <div class="sub">Alisson (13)</div>
-    <div class="sub">Marquinhos (5)</div>
-    <div class="sub">Robertson (26)</div>
-    <div class="sub">De Jong (21)</div>
-    <div class="sub">Pulisic (10)</div>
-    <div class="sub">Haaland (9)</div>
-    <div class="sub">Benzema (9)</div>
+  <!-- DEF -->
+  <div class="player lb" onclick="showStats(1)">
+    <img src="assets/players/davies.jpg">
+    <span>Davies</span>
   </div>
-</section>
-  
-<!-- MATCHES SECTION -->
-<section id="matches" class="section">
-  <h2>Upcoming Matches</h2>
-  <div class="match-cards">
-    <div class="match-card">DSPORT vs City United — Jan 20</div>
-    <div class="match-card">DSPORT vs Blue Stars — Jan 28</div>
-    <div class="match-card">DSPORT vs Rising Lions — Feb 5</div>
+
+  <div class="player cb1" onclick="showStats(2)">
+    <img src="assets/players/vandijk.jpg">
+    <span>Van Dijk</span>
   </div>
+
+  <div class="player cb2" onclick="showStats(3)">
+    <img src="assets/players/koulibaly.jpg">
+    <span>Koulibaly</span>
+  </div>
+
+  <div class="player rb" onclick="showStats(4)">
+    <img src="assets/players/trent.jpg">
+    <span>Trent</span>
+  </div>
+
+  <!-- MID -->
+  <div class="player cm1" onclick="showStats(5)">
+    <img src="assets/players/kante.jpg">
+    <span>Kanté</span>
+  </div>
+
+  <div class="player cm2" onclick="showStats(6)">
+    <img src="assets/players/debruyne.jpg">
+    <span>De Bruyne</span>
+  </div>
+
+  <div class="player cam" onclick="showStats(7)">
+    <img src="assets/players/messi.jpg">
+    <span>Messi</span>
+  </div>
+
+  <!-- ATT -->
+  <div class="player lw" onclick="showStats(8)">
+    <img src="assets/players/ronaldo.jpg">
+    <span>Ronaldo</span>
+  </div>
+
+  <div class="player st" onclick="showStats(9)">
+    <img src="assets/players/lewa.jpg">
+    <span>Lewandowski</span>
+  </div>
+
+  <div class="player rw" onclick="showStats(10)">
+    <img src="assets/players/mbappe.jpg">
+    <span>Mbappé</span>
+  </div>
+
 </section>
 
-<!-- GALLERY SECTION -->
-<section id="gallery" class="section dark">
-  <h2>Gallery</h2>
-  <div class="gallery-grid">
-    <img src="assets/hero-bg.jpg" alt="Match 1">
-    <img src="assets/hero-bg.jpg" alt="Match 2">
-    <img src="assets/hero-bg.jpg" alt="Match 3">
+<!-- STATS MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span onclick="closeModal()">✖</span>
+    <div id="playerStats"></div>
   </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section">
-  <h2>Contact Us</h2>
-  <p>Email: dsportfc@email.com</p>
-</section>
-
-<footer class="footer">
-  <p>© 2026 DSPORT FC. All rights reserved.</p>
-  <button id="theme-toggle">Toggle Dark/Light</button>
-</footer>
+</div>
 
 <script src="script.js"></script>
 </body>
